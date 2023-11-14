@@ -18,7 +18,7 @@ const roleToRoute = {
   }, {
     name: 'ProductAdd',
   }, {
-    name: 'Categroy',
+    name: 'Category',
   }],
 };
 
@@ -28,7 +28,7 @@ const roleToRoute = {
  * @param {Array} routes
  * @returns
  */
-export default function getMenuRoute(role, routes) {
+export default function getMenuRoutes(role, routes) {
   const allowRoutesName = roleToRoute[role].map((item) => item.name);
   const resultRoutes = routes.filter((r) => {
     const obj = r;
@@ -39,5 +39,6 @@ export default function getMenuRoute(role, routes) {
     }
     return false;
   });
+
   return resultRoutes;
 }
